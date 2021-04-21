@@ -1,0 +1,59 @@
+{
+  "name": "OpenLegacy-CLI",
+  "type": "executer",
+  "imgUrl": "logo.png",
+  "execProgram": "node",
+  "main": "app.js",
+  "version": "1.0.0",
+  "description": "OpenLegacy CLI Wrapper",
+  "settings": [
+    {
+      "name": "exePath",
+      "viewName": "OpenLegacy CLI Executable Path",
+      "type": "string"
+    },
+    {
+      "name": "apiKey",
+      "viewName": "OpenLegacy API Key",
+      "type": "vault"
+    }
+  ],
+  "methods": [
+    {
+      "name":"generateCode",
+      "viewName":"Generate OL Code",
+      "params":[
+        {
+          "name": "path",
+          "viewName": "New Project Path",
+          "type": "string"
+        },
+        {
+          "name": "project",
+          "viewName": "Project Name",
+          "type": "string"
+        },
+        {
+          "name": "solution",
+          "viewName": "Solution Name",
+          "type": "string"
+        },
+        {
+          "name": "login",
+          "viewName": "Should Log In?",
+          "type": "boolean"
+        },
+        {
+          "name": "apiKey",
+          "viewName": "OpenLegacy API Key",
+          "type": "vault"
+        }
+      ]
+    },
+    {
+      "name":"logout",
+      "viewName":"Logout",
+      "params":[]
+    }
+  ]
+}
